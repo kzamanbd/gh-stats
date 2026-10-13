@@ -1,17 +1,14 @@
-# [GitHub Stats Visualization](https://github.com/jstrieb/github-stats)
+# GitHub Stats Visualization
 
-<!--
-https://github.community/t/support-theme-context-for-images-in-light-vs-dark-mode/147981/84
--->
-<a href="https://github.com/kzamanbd/github-stats">
-<img src="https://github.com/kzamanbd/github-stats/blob/master/generated/overview.svg#gh-dark-mode-only" />
-<img src="https://github.com/kzamanbd/github-stats/blob/master/generated/languages.svg#gh-dark-mode-only" />
-<img src="https://github.com/kzamanbd/github-stats/blob/master/generated/overview.svg#gh-light-mode-only" />
-<img src="https://github.com/kzamanbd/github-stats/blob/master/generated/languages.svg#gh-light-mode-only" />
+<a href="https://github.com/kzamanbd/gh-stats">
+<img src="https://github.com/kzamanbd/gh-stats/blob/main/generated/overview.svg#gh-dark-mode-only" />
+<img src="https://github.com/kzamanbd/gh-stats/blob/main/generated/languages.svg#gh-dark-mode-only" />
+<img src="https://github.com/kzamanbd/gh-stats/blob/main/generated/overview.svg#gh-light-mode-only" />
+<img src="https://github.com/kzamanbd/gh-stats/blob/main/generated/languages.svg#gh-light-mode-only" />
 </a>
 
 Generate visualizations of GitHub user and repository statistics with GitHub
-Actions. Visualizations can include data for both private repositories, and for
+Actions. Visualizations can include data for both private repositories and for
 repositories you have contributed to, but do not own.
 
 Generated images automatically switch between GitHub light theme and GitHub
@@ -55,10 +52,6 @@ caches statistics for your repositories. Additionally, repositories that were
 last contributed to more than a year ago may not be included in the statistics
 due to limitations in the results returned by the API.
 
-For more information on inaccuracies, see issue
-[#2](https://github.com/jstrieb/github-stats/issues/2),
-[#3](https://github.com/jstrieb/github-stats/issues/3), and
-[#13](https://github.com/jstrieb/github-stats/issues/13).
 
 # Installation
 
@@ -74,7 +67,7 @@ For more information on inaccuracies, see issue
      access token to work. For more, see 
      [#30](https://github.com/jstrieb/github-stats/issues/30).
 2. Create a copy of this repository by clicking
-   [here](https://github.com/jstrieb/github-stats/generate). Note: this is
+   [here](https://github.com/kzamanbd/gh-stats/generate). Note: this is
    **not** the same as forking a copy because it copies everything fresh,
    without the huge commit history. 
 3. Go to the "Secrets" page of your copy of the repository. If this is the
@@ -94,7 +87,7 @@ For more information on inaccuracies, see issue
    - To show statistics only for "owned" repositories and not forks with
      contributions, add an environment variable (under the `env` header in the
      [main
-     workflow](https://github.com/jstrieb/github-stats/blob/master/.github/workflows/main.yml))
+     workflow](https://github.com/kzamanbd/gh-stats/blob/main/.github/workflows/main.yml))
      called `EXCLUDE_FORKED_REPOS` with a value of `true`.
    - These other values are added as secrets by default to prevent leaking
      information about private repositories. If you're not worried about that,
